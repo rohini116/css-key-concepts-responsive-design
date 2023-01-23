@@ -10,6 +10,12 @@ body {
     background-color: var(--light);
 }
 
+.card-container
+{
+    display: flex;
+    justify-content: left;
+    flex-flow: row wrap;
+}
 .card {
     padding: 10px;
     margin: 10px;
@@ -17,4 +23,27 @@ body {
 
 img {
     width: 250px;
+}
+
+h1{
+    font-size: 2.25rem;
+}
+
+p{
+    font-size: 0.75rem;
+}
+
+@media screen and (min-width: 700px) {
+
+body{
+    font-size: 1rem;
+}
+h1{
+    font-size: 2.25rem;
+}
+
+p{
+    font-size: 0.75rem;
+}
+
 }
