@@ -4,17 +4,15 @@
     --light: #E7ECEF;
     --dark: #272932;
     --camel: #D8A47F;
-}
-
-body {
-    background-color: var(--light);
+    color-scheme: dark light;
+    font-family:'Montserrat', sans-serif;
 }
 
 .card-container
 {
     display: flex;
-    justify-content: left;
     flex-flow: row wrap;
+    justify-content: space-around;
 }
 .card {
     padding: 10px;
@@ -32,18 +30,60 @@ h1{
 p{
     font-size: 0.75rem;
 }
-
+@media screen and (max-width: 700px) {
+.card p{
+    display: none;
+}
+}
 @media screen and (min-width: 700px) {
 
 body{
     font-size: 1rem;
+    
 }
 h1{
-    font-size: 2.25rem;
+    font-size: 2.50rem;
 }
 
 p{
-    font-size: 0.75rem;
+    font-size: 0.875rem;
 }
 
+
+}
+
+@media screen and (min-width: 1000px) {
+
+body{
+    font-size: 1.25rem;
+    
+}
+h1{
+    font-size: 2.75rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
+
+}
+
+
+@media screen and (prefers-color-scheme: dark) {
+  p {
+    color: #fff;
+  }
+  body {
+    background-color: var(--dark);
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+  body {
+    background-color: var(--light);
+    }
+  p {
+    color: #000;
+  }
 }
